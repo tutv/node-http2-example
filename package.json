@@ -1,0 +1,39 @@
+{
+  "name": "http2-example",
+  "version": "1.0.0",
+  "description": "An example NodeJS app with HTTP/2 support.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tutv/node-http2-example.git"
+  },
+  "keywords": [
+    "nodejs",
+    "https",
+    "http2",
+    "spdy",
+    "expressjs"
+  ],
+  "author": {
+    "email": "tutv95@gmail.com",
+    "name": "Tu Tran",
+    "url": "https://github.com/tutv"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tutv/node-http2-example/issues"
+  },
+  "homepage": "https://github.com/tutv/node-http2-example#readme",
+  "dependencies": {
+    "compression": "^1.7.2",
+    "confidence": "^3.0.2",
+    "cors": "^2.8.4",
+    "errorhandler": "^1.5.0",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "spdy": "^3.4.7"
+  }
+}
