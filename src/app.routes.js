@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const getEnv = require('./helpers/getEnv');
+const fs = require('fs');
 
 
 /**
@@ -18,12 +19,11 @@ router.all('/', (req, res) => {
         }
     });
 
+    const indexHtml = fs.readFileSync(__dirname + '/public/home.html');
+    const aFile = fs.readFileSync(__dirname + '/public/a.js');
+    stream.end(aFile);
 
-    stream.on('error', function (e) {
-        console.log(e);
-    });
-    stream.write('console.log("hello from push stream!");');
-    res.end('<h1>Hello</h1><script src="/a.js"></script><script src="/b.js"></script>');
+    res.end(indexHtml);
 });
 router.all('/ping', (req, res) => res.send('pong'));
 
